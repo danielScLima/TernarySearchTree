@@ -1,0 +1,19 @@
+RM := rm -rf
+TARGET := program
+OBJS := ternarysearchtree.o program.o
+SRCS := ternarysearchtree.cpp program.cpp
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS) $(SRCS)
+	@echo 'Building ' $(TARGET)
+	@g++ -o $(TARGET) $(OBJS)
+	@echo 'End of build'
+	
+%.o: %.cpp
+	@echo 'Building $@ from $<'
+	@g++ -o $@ -c $<
+	
+clean:
+	@echo "cleaning"
+	$(RM) $(OBJS) $(TARGET)

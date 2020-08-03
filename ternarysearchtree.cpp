@@ -9,10 +9,16 @@ TernarySearchTree::TernarySearchTree()
 
 TernarySearchTree::~TernarySearchTree()
 {
+    cleanTree();
+}
+
+void TernarySearchTree::cleanTree()
+{
     if (root != nullptr)
     {
         root->dealockSubTree();
         delete root;
+        root = nullptr;
     }
 }
 

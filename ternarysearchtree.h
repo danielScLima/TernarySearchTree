@@ -48,6 +48,11 @@ public:
      * \return
      */
     NodeOfTernarySearchTree* getRoot();
+
+    /*!
+     * \brief cleanTree
+     */
+    void cleanTree();
 private:
     struct NodeOfTernarySearchTree* root = nullptr;
 

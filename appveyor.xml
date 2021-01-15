@@ -1,0 +1,15 @@
+# Version format
+version: 1.0.{build}
+
+# Build worker image
+image: ubuntu
+
+# Build platform
+platform: Any CPU
+
+# Build Configuration
+configuration: Debug
+
+build_script: mkdir -p build; cd build; cmake ..; cmake --build .
+
+# Omitted the tests, as they are not relevant for the question
